@@ -36,8 +36,8 @@ namespace Final
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "501694556646-pa6mh15krv1hman7ub5rcni06fdtbtrf.apps.googleusercontent.com",
-                ClientSecret = "SR6FMqTEK09Sbzji2hwwEMWD"
+                ClientId = "id",
+                ClientSecret = "secret"
             });
         }
     }
