@@ -115,6 +115,9 @@ public partial class Pages_Venue : System.Web.UI.Page
         cmd.CommandText = "INSERT INTO venueEvents VALUES ('"+venueNamelbl.Text+"', '"+eventNametxt.Text+"')";
         reader = cmd.ExecuteReader();
         reader.Close();
+        cmd.CommandText = "INSERT INTO attendedEvents VALUES ('" + eventNametxt.Text + "', '"+ User.Identity.GetUserName() + "')";
+        reader = cmd.ExecuteReader();
+        reader.Close();
         //close db connection for now
         c.Close();
         var manager = new UserManager();
